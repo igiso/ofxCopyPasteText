@@ -23,7 +23,7 @@ void testApp::setup(){
     
     
     //orUse a raw string directly:
-    TitleText = "COPY PASTE TEXT";
+    TitleText = "COPY PASTE ME";
 
 }
 
