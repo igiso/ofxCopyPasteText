@@ -1,0 +1,28 @@
+<install>
+
+	<version>0.1</version>
+	<author>Kyriacos Kousoulides</author>
+	<url>........</url>
+
+	<requires>
+	</requires>
+
+	<add>	
+		<src>
+			<folder name="addons/ofxCopyPasteText/src">			
+				<file>../../../addons/ofxCopyPasteText/src/ofxCopyPasteText.h</file>
+				<file>../../../addons/ofxCopyPasteText/src/ofxCopyPasteText.cpp</file>
+                
+			</folder>
+		</src>
+
+		<include>
+			<path>../../../addons/ofxCopyPasteText/src</path>
+		</include>
+		
+		<link>
+		</link>
+
+	</add>
+	
+</install>
