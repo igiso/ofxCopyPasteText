@@ -91,13 +91,14 @@ string getTextFromPasteboard() {
         require_noerr( err, CantGetPasteboardItemIdentifier );
         
         err = PasteboardCopyItemFlavorData( inPasteboard, itemID, CFSTR("public.utf8-plain-text"), &flavorData );
-        data = (char*)CFDataGetBytePtr(flavorData);
-        if(data!=NULL)clipBoard.append(data);
+        if(err==noErr)data = (char*)CFDataGetBytePtr(flavorData);
+        if(data!=NULL&&err==noErr)clipBoard.append(data);else return "Error Pasting";
     CantGetPasteboardItemIdentifier:
         ;
     }
     
 CantGetPasteboardItemCount:
+    
     
     return clipBoard;
     
